@@ -28,3 +28,7 @@ mta_archives/
 # IDEs
 .vscode
 .idea
+
+
+# Source folder of SAP Fiori Tools generated project
+app\books\src

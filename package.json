@@ -11,5 +11,11 @@
   },
   "scripts": {
     "start": "npx cds run"
+  },
+  "sapux": [
+    "app/browse/books"
+  ],
+  "devDependencies": {
+    "@sap-ux/specification": "^1.71.5"
   }
 }
