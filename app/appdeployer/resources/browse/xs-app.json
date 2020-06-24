@@ -1,0 +1,18 @@
+{
+	"authenticationMethod": "route",
+	"routes": [
+		{
+			"source": "^/browse/(.*)$",
+			"target": "/catalog-admin/$1",
+			"destination": "odata-services",
+			"authenticationType": "xsuaa",
+			"csrfProtection": false
+		},
+		{
+			"source": "^(.*)$",
+			"target": "$1",
+			"service": "html5-apps-repo-rt",
+			"authenticationType": "xsuaa"
+		}
+	]
+}

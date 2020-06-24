@@ -1,0 +1,16 @@
+{
+    "VCAP_SERVICES": {
+        "xsuaa": [
+            {
+                "name": "cap-flp-uaa", "label": "xsuaa", "tags": [ "xsuaa" ],
+                "credentials": {
+                }
+            }
+        ]
+    },
+    "destinations" : [ { 
+        "name": "srv-api",
+        "url": "https://078e0927trial-ui5-cap-flp-srv.cfapps.eu10.hana.ondemand.com",
+        "forwardAuthToken": true
+    }]
+}
