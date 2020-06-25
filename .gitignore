@@ -32,3 +32,6 @@ mta_archives/
 
 # Source folder of SAP Fiori Tools generated project
 app\books\src
+
+# Source folder of SAP Fiori Tools generated project
+app\books2\src

@@ -27,7 +27,8 @@
     }
   },
   "sapux": [
-    "app/browse/books"
+    "app/browse/books",
+    "app/books2"
   ],
   "devDependencies": {
     "@sap-ux/specification": "^1.71.5"

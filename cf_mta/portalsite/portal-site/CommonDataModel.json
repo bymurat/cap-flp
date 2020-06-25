@@ -9,35 +9,28 @@
 			"_version": "3.0.0",
 			"identification": {
 				"id": "defaultCatalogId",
-				"title": "title",
+				"title": "Catalog",
 				"entityType": "catalog"
 			},
 			"payload": {
-				"viz": []
+				"viz": [{
+					"vizId" : "c4u-flp.books2",
+					"appId" : "c4u-flp.books2"
+				}]
 			}
 		}],
 		"groups": [{
 			"_version": "3.0.0",
 			"identification": {
 				"id": "defaultGroupId",
-				"title": "Group title",
-				"entityType": "group"
-			},
-			"payload": {
-				"viz": []
-			}
-		}, {
-			"_version": "3.0.0",
-			"identification": {
-				"id": "new-group",
-				"title": "Title 1",
+				"title": "title",
 				"entityType": "group"
 			},
 			"payload": {
 				"viz": [{
-					"id": "c4u-dev-localized-0-1592336984883",
-					"appId": "c4u-flp-books",
-					"vizId": "Books-manage"
+					"id": "c4u-flp.books2-0-1593011142778",
+					"vizId" : "c4u-flp.books2",
+					"appId" : "c4u-flp.books2"
 				}]
 			}
 		}],
@@ -61,7 +54,7 @@
 										},
 										"enableSearch": false,
 										"enablePersonalization": true,
-										"enableSetTheme": true,
+										"enableSetTheme": false,
 										"enableSetLanguage": true
 									}
 								}
@@ -69,11 +62,12 @@
 						}
 					}
 				},
-				"groupsOrder": ["defaultGroupId", "new-group"],
+				"groupsOrder": ["defaultGroupId"],
 				"sap.cloud.portal": {
 					"config": {
 						"theme.id": "sap_fiori_3",
-						"theme.active": ["sap_fiori_3", "sap_fiori_3_dark", "sap_belize_hcb", "sap_belize_hcw"]
+						"theme.active": ["sap_fiori_3", "sap_fiori_3_dark", "sap_belize_hcb", "sap_belize_hcw"],
+						"ui5VersionNumber": "1.79.1"
 					}
 				}
 			}
