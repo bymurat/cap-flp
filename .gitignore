@@ -10,6 +10,7 @@ target/
 cf_mta/node_modules
 cf_mta/appdeployer/resources
 app/browse/books/dist
+app\browse\books\dist\*
 
 
 # Web IDE, App Studio

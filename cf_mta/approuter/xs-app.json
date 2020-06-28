@@ -3,7 +3,7 @@
     "authenticationMethod": "route",
     "routes": [
         {
-            "source": "^/catalog/(.*)$",
+            "source": "^(.*)$",
             "target": "/$1",
             "destination": "srv-binding",
             "csrfProtection": false,
