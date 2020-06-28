@@ -8,7 +8,7 @@ version: 1.0.0
 description: "A simple CAP project."
 parameters:
   enable-parallel-deployments: true
-  deploy_mode: html5-repo
+  # deploy_mode: html5-repo
   config:
     sizeLimit: 16
   
@@ -29,7 +29,7 @@ modules:
    type: hdb
    path: gen/db  
    parameters:
-    #  app-name: cap-flp-db
+     app-name: cap-flp-db-dev
      memory: 64M  
    requires:
     - name: cap-flp-hdi-container
@@ -60,7 +60,7 @@ modules:
 #####################################################################################################################
  - name: cap-flp-browse-books
    type: html5
-   path: app/books2
+   path: app/browse/books/
    build-parameters:
        builder: custom
        commands:
@@ -72,7 +72,7 @@ modules:
 
  - name: cap-flp-html5-app-deployer
    type: com.sap.html5.application-content
-   path: cf_mta/appdeployer
+   path: cf_mta/appdeployer/
    requires:
        - name: cap-flp-html5-repo-host
    parameters:
@@ -83,7 +83,7 @@ modules:
            - name: cap-flp-browse-books
              artifacts:
                  - "./*"
-             target-path: resources/books2
+             target-path: resources/books/
        ignore: [".gitignore"]
 #####################################################################################################################
 # App Router

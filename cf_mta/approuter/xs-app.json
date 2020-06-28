@@ -3,14 +3,14 @@
     "authenticationMethod": "route",
     "routes": [
         {
-            "source": "^/api/(.*)$",
+            "source": "^/catalog/(.*)$",
             "target": "/$1",
             "destination": "srv-binding",
             "csrfProtection": false,
             "authenticationType": "xsuaa"
         },
 		{
-			"source": "^/ui/(.*)$",
+			"source": "^(.*)$",
 			"target": "/app/browse/$1",
 			"service": "html5-apps-repo-rt",
 			"authenticationType": "xsuaa"

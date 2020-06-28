@@ -14,8 +14,8 @@
 			},
 			"payload": {
 				"viz": [{
-					"vizId" : "c4u-flp.books2",
-					"appId" : "c4u-flp.books2"
+					"vizId" : "books-manage",
+					"appId" : "c4u-flp-books"
 				}]
 			}
 		}],
@@ -23,14 +23,14 @@
 			"_version": "3.0.0",
 			"identification": {
 				"id": "defaultGroupId",
-				"title": "title",
+				"title": "Home",
 				"entityType": "group"
 			},
 			"payload": {
 				"viz": [{
-					"id": "c4u-flp.books2-0-1593011142778",
-					"vizId" : "c4u-flp.books2",
-					"appId" : "c4u-flp.books2"
+					"id": "c4u-flp-books-0-202006251713",
+					"vizId" : "books-manage",
+					"appId" : "c4u-flp-books"
 				}]
 			}
 		}],
