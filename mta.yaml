@@ -8,11 +8,9 @@ version: 1.0.0
 description: "A simple CAP project."
 parameters:
   enable-parallel-deployments: true
-  # deploy_mode: html5-repo
   config:
     sizeLimit: 16
-  
-  
+
 build-parameters:
   before-all:
    - builder: custom
@@ -54,9 +52,8 @@ modules:
       properties:
         url: ${default-url}
 
-
 #####################################################################################################################
-# Apps
+# APPS
 #####################################################################################################################
  - name: cap-flp-browse-books
    type: html5
@@ -85,6 +82,7 @@ modules:
                  - "./*"
              target-path: resources/books/
        ignore: [".gitignore"]
+       
 #####################################################################################################################
 # App Router
 #####################################################################################################################
@@ -109,7 +107,8 @@ modules:
              strictSSL: false
              url: ~{url}
    properties:
-       SEND_XFRAMEOPTIONS: false     
+       SEND_XFRAMEOPTIONS: false
+       
 #####################################################################################################################
 # FLP
 #####################################################################################################################
@@ -126,19 +125,10 @@ modules:
        - name: cap-flp-uaa
        - name: cap-flp-html5-repo-host
 
-
+#####################################################################################################################
+# RESOURCES
+#####################################################################################################################
 resources:
- # services extracted from CAP configuration
- # 'service-plan' can be configured via 'cds.requires.<name>.vcap.plan'
-# ------------------------------------------------------------
-#  - name: cap-flp-hdi-container
-# # ------------------------------------------------------------
-#    type: com.sap.xs.hdi-container
-#    parameters:
-#      service: hanatrial  # or 'hanatrial' on trial landscapes
-#      service-plan: hdi-shared
-#    properties:
-#      hdi-service-name: ${service-name}
 
  - name: cap-flp-html5-repo-runtime
    type: org.cloudfoundry.managed-service
@@ -154,10 +144,11 @@ resources:
 
  - name: cap-flp-hdi-container
    type: com.sap.xs.hdi-container
+   parameters:
+     service: hanatrial
+     service-plan: hdi-shared   
    properties:
        hdi-container-name: ${service-name}
-   requires:
-       - name: db
 
  - name: cap-flp-uaa
    type: org.cloudfoundry.managed-service
@@ -176,17 +167,8 @@ resources:
                  scope-references:
                      - uaa.user
 
-
  - name: cap-flp-portal
    type: org.cloudfoundry.managed-service
    parameters:
        service-plan: standard
        service: portal
-
- - name: db
-   type: com.sap.xs.hdi-container
-   parameters:
-     service: hanatrial  # or 'hanatrial' on trial landscapes
-     service-plan: hdi-shared
-   properties:
-     hdi-service-name: ${service-name}       
