@@ -28,9 +28,5 @@
   },
   "sapux": [
     "app/browse/books"
-  ],
-  "devDependencies": {
-    "@sap-ux/specification": "^1.71.5",
-    "sqlite3": "^4.2.0"
-  }
+  ]
 }
